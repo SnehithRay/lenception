@@ -7,34 +7,36 @@ class Enemy:
 
 	def is_alive(self):
 		return self.hp > 0
-		
-	def handle_input(self, verb, noun1, noun2, inventory):
-		return [False, None, inventory]
 
 
-class GiantSpider(Enemy):
+
+class SmallEnemy(Enemy):
 	def __init__(self):
-		self.name = "Giant Spider"
-		self.hp = 10
-		self.damage = 2
-
-
-class Ogre(Enemy):
-	def __init__(self):
-		self.name = "Ogre"
-		self.hp = 30
-		self.damage = 10
-
-
-class BatColony(Enemy):
-	def __init__(self):
-		self.name = "Colony of bats"
+		self.name = "Small Len"
 		self.hp = 100
-		self.damage = 4
+		self.damage = 5
+		self.speed = 25
 
 
-class RockMonster(Enemy):
+class BigEnemy(Enemy):
 	def __init__(self):
-		self.name = "Rock Monster"
-		self.hp = 80
-		self.damage = 15
+		self.name = "Big Enemy"
+		self.hp = 200
+		self.damage = 10
+		self.speed = 5
+
+
+class Len_Clone(Enemy):
+	def __init__(self):
+		self.name = "Len Clone"
+		self.hp = 500
+		self.damage = 25
+		self.speed = 50
+
+
+class Len_Boss(Enemy):
+	def __init__(self):
+		self.name = "Len Boss"
+		self.hp = 1000
+		self.damage = 100
+		self.speed = 100

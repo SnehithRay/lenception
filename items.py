@@ -1,5 +1,6 @@
 from random import randint 	# Used to generate random integers.
 
+
 class Item:
 	name = "Do not create raw Item objects!"
 	
@@ -8,12 +9,17 @@ class Item:
 	
 	is_dropped = False	# This is going to store the status of whether this item has been picked up and dropped before.
 	
+	value = 0		# Used to establish value if item is for sale.
+	
 		
-	def __init__(self, description = ""):
+	def __init__(self, description = "", value = 0):
 		if(description):
 			self.intro_description = description
 		else:
 			self.intro_description = self.dropped_description
+		
+		if(self.value == 0):
+			self.value = value
 			
 	def __str__(self):
 		return self.name	
