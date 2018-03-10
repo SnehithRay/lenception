@@ -32,7 +32,7 @@ class NPC:
 
 class OldMan(NPC):
 	name = "Old Man"
-	goods = [items.Dagger(), items.Red_Potion(value = 50), items.Crusty_Bread(value = 5)]
+	goods = [items.Test_tube(), items.PurdueScholarship_Potion(value = 50), items.Pizza(value = 5)]
 	quantities = [1, -1, 2]		# Set quantity to -1 if you want it to be infinite.
 	
 	description = "An old man in a red robe is standing in the middle of the room."
@@ -63,7 +63,7 @@ class OldMan(NPC):
 	def first_time(self):		# Used to have your NPC do something different the first time you see them.
 		self.first_encounter = False
 		text = self.description
-		text += " As he holds out a dagger, he says: 'It is dangerous to go alone... take this.'"
+		text += " As he holds out a test tube, he says: 'It is dangerous to go alone... take this.'"
 		return text
 		
 	def handle_input(self, verb, noun1, noun2, inventory):
