@@ -144,8 +144,8 @@ class Corridor(MapTile):
 
 
 class StoreRoom(MapTile):
-	items = [items.Rusty_Sword("A rusty sword is propped against a shelf in the corner of the room."), \
-			items.Red_Potion("A glowing bottle of mysterious red potion sits on one of the shelves."), \
+	items = [items.Rusty_Scalpel("A rusty scalpel is propped against a shelf in the corner of the room."), \
+			items.PurdueScholarship_Potion("A glowing bottle of mysterious red potion sits on one of the shelves."), \
 			items.Old_Chest([items.Mountain_of_Gold()]), \
 			items.Gold_Coins("A shiny handful of gold coins is on the ground near the chest.")]
 
